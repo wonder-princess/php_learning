@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "enter your ID and password"
+AuthUserFile "C:/Users/sekai/Documents/LocalRepository/php_learning/maintenance/.thpassword"
+Require valid-user
