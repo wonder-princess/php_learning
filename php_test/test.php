@@ -118,5 +118,4 @@ $who_are_you();
 echo __DIR__;
 echo __FILE__;
 
-
 ?>

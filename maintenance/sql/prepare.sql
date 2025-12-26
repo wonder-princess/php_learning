@@ -1,0 +1,1 @@
+select * from contact where id = :id;
