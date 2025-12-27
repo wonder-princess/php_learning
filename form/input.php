@@ -103,6 +103,7 @@ if (!empty($_POST['btn_confirm'])) {
       <option value="Chrome"  <?php echo ($browser === 'Chrome')  ? 'selected' : ''; ?>>Chrome</option>
       <option value="FireFox" <?php echo ($browser === 'FireFox') ? 'selected' : ''; ?>>FireFox</option>
       <option value="Edge"    <?php echo ($browser === 'Edge')    ? 'selected' : ''; ?>>Edge</option>
+      <option value="safari"  <?php echo ($browser === 'safari')    ? 'selected' : ''; ?>>safari</option>
     </select>
     <br>
 
@@ -147,8 +148,16 @@ if (!empty($_POST['btn_confirm'])) {
   </form>
 
 <?php else: ?>
+
+<?php require '../maintenance/insert.php';?>
+
+
   <h2>complete</h2>
-  <?php unset($_SESSION['csrfToken']); ?>
+
+  <?php unset($_SESSION['csrfToken']); 
+  
+  insertContact($_POST);
+  ?>
 <?php endif; ?>
 
 </body>
